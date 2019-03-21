@@ -1,0 +1,12 @@
+{% extends "head.html" %}
+
+{% block content %}
+
+	<h1>Staff List</h1>
+	<ul>
+		{% for staff in staff_list %}
+			<ol>{{staff.name}}</ol>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
