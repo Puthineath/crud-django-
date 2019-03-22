@@ -1,0 +1,10 @@
+{% extends "head.html" %}
+
+{% block content%}
+	<h1>Delete men ey? {{object.name}}</h1>
+	<form method="POST">
+		{% csrf_token %}
+		<input type="submit" class="btn btn-danger" value="Yes">
+	</form>
+	<a href="{% url 'staff_detail' pk=staff.pk  %}" class="btn btn-success"> No </a>
+{% endblock %}

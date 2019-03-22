@@ -12,7 +12,7 @@ class Staff(models.Model):
 		
 
 	def get_absolute_url(self):
-		return reverse_lazy("staff_list", kwargs={"id": self.id})
+		return reverse_lazy("staff_detail", kwargs={"pk": self.pk})
 
 	# def get_absolute_url(self):
 	# 	return reverse_lazy("staff_create")

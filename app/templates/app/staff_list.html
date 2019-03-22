@@ -5,7 +5,9 @@
 	<h1>Staff List</h1>
 	<ul>
 		{% for staff in staff_list %}
-			<ol>{{staff.name}}</ol>
+			<a href="{% url 'staff_detail' pk=staff.pk %}">
+				<ol>{{staff.name }}</ol>
+			</a>
 		{% endfor %}
 	</ul>
 
